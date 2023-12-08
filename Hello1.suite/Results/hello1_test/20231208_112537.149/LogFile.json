@@ -1,0 +1,28 @@
+{
+	"entries": [
+		{
+				"message": "Running hello1_test.script",
+				"identifier": "START",
+				"timestamp": "2023-12-08 11:25:37.164 +0000"
+			},
+		{
+				"handlerName": "on_hello1_test",
+				"timestamp": "2023-12-08 11:25:37.469 +0000",
+				"message": "Hello",
+				"scriptName": "hello1_test.script",
+				"handlerLine": 1,
+				"identifier": "Log"
+			},
+		{
+				"message": "(Duration:\"0.387\", Errors:\"0\", Exceptions:\"0\", StartTime:\"2023-12-08 11:25:37 +0000\", Successes:\"1\", TestCase:\"hello1_test.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2023-12-08 11:25:37.566 +0000"
+			},
+		{
+				"message": "Execution Time 0:00:00 hello1_test.script",
+				"identifier": "SUCCESS",
+				"timestamp": "2023-12-08 11:25:37.600 +0000"
+			}
+	],
+	"createdTimestamp": "2023-12-08 11:25:37.170 +0000"
+}
