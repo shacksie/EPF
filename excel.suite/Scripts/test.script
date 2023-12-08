@@ -1,0 +1,33 @@
+﻿
+
+--https://docs.eggplantsoftware.com/studio/stk-excel-file-interaction/#working-with-excel-files-in-sensetalk
+
+--Example 1 read/write to spreadsheet located in EPF Resources
+
+set MyExcelFile to Workbook(ResourcePath("TestExcelDB_temp.xlsx")) // Sets MyExcelFile as a reference variable for the TestExcelDB_temp.xlsx Excel file
+set worksheet1 to MyExcelFile.Worksheet("People") // Sets the worksheet named "People" to worksheet1
+put worksheet1.Cell(2,2) into workingcell
+put workingcell
+put 23 into Cell ("B7") of worksheet1— enters "23" to cell B7
+
+------
+
+--Example 2 read/write to spreadsheet in Mac folder
+
+set MyExcelFile to Workbook("/Users/shacklet/TestExcelDB.xlsx") // Sets MyExcelFile as a reference variable for the TestExcelDB.xlsx Excel file
+set worksheet1 to MyExcelFile.Worksheet("People") // Sets the worksheet named "People" to worksheet1
+put worksheet1.Cell(2,2) into workingcell
+put workingcell
+put 23 into Cell ("B7") of worksheet1— enters "23" to cell B7
+
+------
+
+--Example 3 read/write to spreadsheet in Windows folder via symbolic link (Alias)
+
+set MyExcelFile to Workbook("/Volumes/[C] VM1/excel_mac_test/TestExcelDB_on_windows.xlsx") // Sets MyExcelFile as a reference variable for the TestExcelDB.xlsx Excel file
+set worksheet1 to MyExcelFile.Worksheet("People") // Sets the worksheet named "People" to worksheet1
+put worksheet1.Cell(2,2) into workingcell
+put workingcell
+put 23 into Cell ("B7") of worksheet1— enters "23" to cell B7
+
+
